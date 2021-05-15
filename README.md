@@ -12,13 +12,13 @@ If x doesn't satisfy any of the above conditions, simply return x.
 
 ## Requirements
 
-* Python 3.5.x
+* Python 3.7.4+
 
 ## How to Use
 
 The unit tests for ``fizz_buzz``can be run on the command line interface:
 
 ```
-python -m unittest test_fizzbuzz.py
-python -m unittest -v test_fizzbuzz.py
+python -m unittest
+python -m unittest -v
 ```
