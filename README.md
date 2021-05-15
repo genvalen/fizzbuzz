@@ -13,7 +13,7 @@ If x doesn't satisfy any of the above conditions, simply return x.
 
 ## Requirements
 
-* Python 3.5.X
+* Python 3.5.x
 
 ## How to Use
 
