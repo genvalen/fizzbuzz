@@ -53,41 +53,40 @@ class FizzBuzzTest(unittest.TestCase):
 # Testing numbers beyond 15
 #####################################
 
-# Test when x is a multiple of 3 in the range of 1 through 100 
-    def test_multiples_of_3_in_range_16_to_100(self):
+# Test when x is a multiple of 3 in the range of 3 through 100 
+    def test_multiples_of_3_in_range_3_to_100(self):
         test_cases = [
             (num, 'Fizz') 
-            for num in range(0, 101, 3) 
-            if num % 5 != 0 #this condition allows us to skip over 0 since zero is divisible by every int
+            for num in range(3, 101, 3) 
+            if num % 5 != 0 # ignore multiples of 5
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
                 self.assertEqual(self.fizzbuzz(number), expected_output)
 
-# Test multiples of 5 in the range of 1 through 100
-    def test_multiples_of_5_in_range_1_to_100(self):
+# Test multiples of 5 in the range of 5 through 100
+    def test_multiples_of_5_in_range_5_to_100(self):
         test_cases = [
             (num, 'Buzz') 
-            for num in range(0, 101, 5) 
-            if num % 3 != 0 #this condition allows us to skip over 0 since zero is divisible by every int
+            for num in range(5, 101, 5) 
+            if num % 3 != 0 # ignore multiples of 3
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
                 self.assertEqual(self.fizzbuzz(number), expected_output)
 
-# Test multiples of 5 that are also multiples of 3 in the range of 1 through 100
-    def test_multiples_of_5_that_are_also_multiples_of_3_in_range_1_to_100(self):
+# Test multiples of 5 that are also multiples of 3 in the range of 5 through 100
+    def test_multiples_of_5_that_are_also_multiples_of_3_in_range_5_to_100(self):
         test_cases = [
             (num, 'FizzBuzz') 
-            for num in range(0, 101, 5) 
-            if num % 3 == 0
-            if num != 0
+            for num in range(5, 101, 5) 
+            if num % 3 == 0 
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
                 self.assertEqual(self.fizzbuzz(number), expected_output)
 
-# Test output within a list comprehension for varied ranges
+# Test output within a list comprehension for various ranges
     def test_outputs_when_x_is_in_the_range_of_1_through_15(self):
         self.assertListEqual(
             [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz'],
