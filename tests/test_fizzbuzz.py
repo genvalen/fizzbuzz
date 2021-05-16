@@ -1,12 +1,8 @@
 import unittest
 
-from fizzbuzz.fizzbuzz import *
+from fizzbuzz.fizzbuzz import fizz_buzz
 
 class FizzBuzzTest(unittest.TestCase):
-
-    def setUp(self):
-        self.fizz_buzz = fizz_buzz
-
 
 # The following parameterized tests examine the output when x is 1 - 15.
 # Testing numbers 1 - 15 is enough to ENSURE COVERAGE of all multiples of 3, 5, or both 3 AND 5.
@@ -23,7 +19,7 @@ class FizzBuzzTest(unittest.TestCase):
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
-                self.assertEqual(self.fizz_buzz(number), expected_output)
+                self.assertEqual(fizz_buzz(number), expected_output)
 
     def test_that_an_input_divisble_by_3_only_returns_fizz(self):
         test_cases = [
@@ -34,7 +30,7 @@ class FizzBuzzTest(unittest.TestCase):
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
-                self.assertEqual(self.fizz_buzz(number), expected_output)
+                self.assertEqual(fizz_buzz(number), expected_output)
 
     def test_that_an_input_divisble_by_5_only_returns_buzz(self):
         test_cases = [
@@ -43,11 +39,10 @@ class FizzBuzzTest(unittest.TestCase):
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
-                self.assertEqual(self.fizz_buzz(number), expected_output)
+                self.assertEqual(fizz_buzz(number), expected_output)
 
     def test_that_an_input_divisble_by_both_3_and_5_returns_fizzbuzz(self):
-        self.assertEqual('FizzBuzz', self.fizz_buzz(15))
-
+        self.assertEqual('FizzBuzz', fizz_buzz(15))
 
 # Testing numbers beyond 15
 #####################################
@@ -61,7 +56,7 @@ class FizzBuzzTest(unittest.TestCase):
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
-                self.assertEqual(self.fizz_buzz(number), expected_output)
+                self.assertEqual(fizz_buzz(number), expected_output)
 
 # Test multiples of 5 in the range of 5 through 100
     def test_multiples_of_5_in_range_5_to_100(self):
@@ -72,7 +67,7 @@ class FizzBuzzTest(unittest.TestCase):
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
-                self.assertEqual(self.fizz_buzz(number), expected_output)
+                self.assertEqual(fizz_buzz(number), expected_output)
 
 # Test multiples of 5 that are also multiples of 3 in the range of 5 through 100
     def test_multiples_of_5_that_are_also_multiples_of_3_in_range_5_to_100(self):
@@ -83,18 +78,18 @@ class FizzBuzzTest(unittest.TestCase):
         ]
         for number, expected_output in test_cases:
             with self.subTest(f'{number} -> {expected_output}'):
-                self.assertEqual(self.fizz_buzz(number), expected_output)
+                self.assertEqual(fizz_buzz(number), expected_output)
 
 # Test output within a list comprehension for various ranges
     def test_outputs_when_x_is_in_the_range_of_1_through_15(self):
         self.assertListEqual(
             [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz'],
-            [self.fizz_buzz(x) for x in range(1, 16)]
+            [fizz_buzz(x) for x in range(1, 16)]
         )
     def test_outputs_when_x_is_in_the_range_of_16_through_30(self):
         self.assertListEqual(
             [16, 17, 'Fizz', 19, 'Buzz', 'Fizz', 22, 23, 'Fizz', 'Buzz', 26, 'Fizz', 28, 29, 'FizzBuzz'], 
-            [self.fizz_buzz(x) for x in range(16, 31)]
+            [fizz_buzz(x) for x in range(16, 31)]
         )
 
 # Testing Errors
@@ -103,29 +98,29 @@ class FizzBuzzTest(unittest.TestCase):
 # Test that program raises TypeErrors
     def test_that_passing_string_as_argument_raises_error(self):
         with self.assertRaises(TypeError):
-            self.fizz_buzz('42')
+            fizz_buzz('42')
     
     def test_that_passing_a_float_as_argument_raises_error(self):
         with self.assertRaises(TypeError):
-            self.fizz_buzz(3.1415926)
+            fizz_buzz(3.1415926)
 
     def test_that_passing_a_boolean_as_argument_raises_error(self):
        with self.assertRaises(TypeError):
-           self.fizz_buzz(True)
+           fizz_buzz(True)
 
     def test_that_passing_more_than_one_argument_raises_error(self):
         with self.assertRaises(TypeError):
-            self.fizz_buzz(12, 30)
-
+            fizz_buzz(12, 30)
 
 # Test that program raises ValueErrors
     def test_that_passing_zero_as_argument_raises_error(self):
         with self.assertRaises(ValueError):
-            self.fizz_buzz(0)
+            fizz_buzz(0)
 
     def test_that_passing_a_negative_number_as_argument_raises_error(self):
         with self.assertRaises(ValueError):
-            self.fizz_buzz(-42)
+            fizz_buzz(-42)
+
 
 if __name__ == '__main__':
     unittest.main()
