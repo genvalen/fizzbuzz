@@ -83,13 +83,13 @@ class FizzBuzzTest(unittest.TestCase):
 # Test output within a list comprehension for various ranges
     def test_outputs_when_x_is_in_the_range_of_1_through_15(self):
         self.assertListEqual(
-            [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz'],
-            [fizz_buzz(x) for x in range(1, 16)]
+            [fizz_buzz(x) for x in range(1, 16)],
+            [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz']
         )
     def test_outputs_when_x_is_in_the_range_of_16_through_30(self):
         self.assertListEqual(
-            [16, 17, 'Fizz', 19, 'Buzz', 'Fizz', 22, 23, 'Fizz', 'Buzz', 26, 'Fizz', 28, 29, 'FizzBuzz'], 
-            [fizz_buzz(x) for x in range(16, 31)]
+            [fizz_buzz(x) for x in range(16, 31)],
+            [16, 17, 'Fizz', 19, 'Buzz', 'Fizz', 22, 23, 'Fizz', 'Buzz', 26, 'Fizz', 28, 29, 'FizzBuzz'] 
         )
 
 # Testing Errors
