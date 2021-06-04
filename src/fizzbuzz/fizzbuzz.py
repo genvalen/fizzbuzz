@@ -60,4 +60,4 @@ def fizz_buzz(x: int) -> Any:
 
 if __name__ == '__main__':
         import doctest
-        doctest.testmod(name='numbers_sum', verbose=True)
+        doctest.testmod()
