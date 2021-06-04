@@ -17,25 +17,25 @@ def fizz_buzz(x: int) -> Any:
         divisible by both 3 and 5, return the string 'FizzBuzz';
         and if divisible by neither 3 nor 5, simply return x.
     
-    >>> [FizzBuzz.output(num) for num in range(1,16)]
+    >>> [fizz_buzz(num) for num in range(1,16)]
     [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz']
-    >>> Fizzbuzz.output(15)
+    >>> fizz_buzz(15)
     'FizzBuzz'
 
     The fizz_buzz method will only accept a positive integer as an argument, anything else will raise an error.
-    >>> Fizzbuzz.output('42')
+    >>> fizz_buzz('42')
     Traceback (most recent call last):
         ...
     TypeError: 42 is not an integer.
-    >>> Fizzbuzz().output(3.1415926)
-    Traceback (most recent call last):
-        ...
-    TypeError: 3.1415926 is not an integer.        
-    >>> Fizzbuzz.output(True)
+    >>> fizz_buzz(True)
     Traceback (most recent call last):
         ...
     TypeError: True is not an integer.
-    
+
+    # >>> fizz_buzz(3.1415926)
+    # Traceback (most recent call last):
+    #     ...
+    # TypeError: 3.1415926 is not an integer.  
     '''
     # If x is NOT an integer, or if IT IS a boolean, this check will raise a TypeError
     if isinstance(x, bool) or not isinstance(x, int):
@@ -56,3 +56,8 @@ def fizz_buzz(x: int) -> Any:
         return 'Buzz'
 
     return x
+
+
+if __name__ == '__main__':
+        import doctest
+        doctest.testmod(name='numbers_sum', verbose=True)
