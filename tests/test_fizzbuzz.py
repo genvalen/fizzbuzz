@@ -1,6 +1,6 @@
 import unittest
 
-from fizzbuzz.fizzbuzz import fizz_buzz
+from src.fizzbuzzer.fizzbuzz import fizz_buzz
 
 class FizzBuzzTest(unittest.TestCase):
 
