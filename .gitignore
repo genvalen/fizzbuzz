@@ -151,3 +151,7 @@ Thumbs.db
 
 # notes
 notes.txt
+
+# requirements for conda env
+requirements_conda.txt
+fizzbuzzer.yml
