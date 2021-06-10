@@ -32,13 +32,13 @@ FizzBuzz
 The unit tests for ``fizz_buzz``can be run on the command line interface:
 
 ```
-python -m unittest
-python -m unittest -v
+$ python -m unittest
+$ python -m unittest -v
 ```
 
 As well as the doctests:
 
 ```
-python -m doctest fizzbuzz.py 
-python -m doctest fizzbuzz.py -v
+$ python -m doctest fizzbuzz.py 
+$ python -m doctest fizzbuzz.py -v
 ```
