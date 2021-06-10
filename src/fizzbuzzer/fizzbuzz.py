@@ -6,11 +6,11 @@ def is_divisible_by_3(x: int) -> bool:
     '''Determine if x is divisible by 3'''
     return x % 3 == 0
 
-def is_divisible_by_5(x: int) -> bool:
+def is_divisible_by_5(x: str) -> bool:
     '''Determine if x is divisible by 5'''
     return x % 5 == 0
 
-def fizz_buzz(x: int) -> Any:
+def fizz_buzz(x: str) -> Any:
     '''Return an output for x according to the following rules:
 
     If x is a positive integer (i.e., greater than 0) and:
@@ -25,10 +25,10 @@ def fizz_buzz(x: int) -> Any:
     'FizzBuzz'
 
     The fizz_buzz method will only accept a positive integer as an argument, anything else will raise an error.
-    >>> fizz_buzz('42')
+    >>> fizz_buzz('Hello World')
     Traceback (most recent call last):
         ...
-    TypeError: 42 is not an integer.
+    TypeError: Hello World is not an integer.
     >>> fizz_buzz(True)
     Traceback (most recent call last):
         ...
@@ -39,7 +39,11 @@ def fizz_buzz(x: int) -> Any:
     #     ...
     # TypeError: 3.1415926 is not an integer.  
     '''
-    # If x is NOT an integer, or if IT IS a boolean, this check will raise a TypeError
+    # If x is a decimal string, convert to int type
+    if isinstance(x, str) and x.isdecimal():
+        x = int(x)
+
+    # If x is a boolean, or if it is NOT an integer, this check will raise a TypeError
     if isinstance(x, bool) or not isinstance(x, int):
         raise TypeError(f'{x} is not an integer.')
 
@@ -61,4 +65,4 @@ def fizz_buzz(x: int) -> Any:
 
 
 if __name__ == '__main__':
-        doctest.testmod()
+    doctest.testmod()

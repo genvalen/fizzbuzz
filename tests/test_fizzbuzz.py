@@ -96,10 +96,14 @@ class FizzBuzzTest(unittest.TestCase):
 #####################################
 
 # Test that program raises TypeErrors
-    def test_that_passing_string_as_argument_raises_error(self):
+    def test_that_passing_nondecimal_string_as_argument_raises_error(self):
         with self.assertRaises(TypeError):
-            fizz_buzz('42')
-    
+            fizz_buzz('Hello World')
+
+    def test_that_passing_fraction_as_argument_raises_error(self):
+        with self.assertRaises(TypeError):
+            fizz_buzz('2/3')
+
     def test_that_passing_a_float_as_argument_raises_error(self):
         with self.assertRaises(TypeError):
             fizz_buzz(3.1415926)
@@ -107,10 +111,6 @@ class FizzBuzzTest(unittest.TestCase):
     def test_that_passing_a_boolean_as_argument_raises_error(self):
        with self.assertRaises(TypeError):
            fizz_buzz(True)
-
-    def test_that_passing_more_than_one_argument_raises_error(self):
-        with self.assertRaises(TypeError):
-            fizz_buzz(12, 30)
 
 # Test that program raises ValueErrors
     def test_that_passing_zero_as_argument_raises_error(self):
