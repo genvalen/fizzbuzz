@@ -6,7 +6,7 @@ with open('README.md', 'r') as fh:
 
 setup(name='fizzbuzzer',
       version='0.0.1',
-      description='Python package that returns the output of an integer x according to the rules of FizzBuzz.',
+      description='Return the output of an integer, x, according to the rules of FizzBuzz on your command line.',
       long_description=long_description, 
       long_description_content_type='text/markdown',
       url='https://github.com/genvalen/fizzbuzz',
