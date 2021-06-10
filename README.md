@@ -1,6 +1,8 @@
-# FizzBuzz
+# FizzBuzzer
 
 ## What is this repository for?
+
+FizzBuzzer allows you to implement ``fizz_buzz`` on the command line.
 
 ``fizz_buzz`` is a function that accepts an integer, x, as an argument and returns an output for x according to the following rules:
 * If x is a positive integer (i.e., greater than 0) and:
