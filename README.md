@@ -15,19 +15,18 @@ If x doesn't satisfy any of the above conditions, simply return x.
 * Python 3.7.4+
 
 ## How to Use
-To begin using, download the repository, open in the command line interface, and type `$ python fizzbuzz` followed by the integer(s) you want to convert. If you pass in more than one integer, each result is returned on a new line. Here are a few input examples:
+To begin using, download the repository, open in the command line interface, and type `$ python src` followed by the integer(s) you want to convert. If you pass in more than one integer, each result is returned on a new line. Here are a few input examples:
 
 ```
-$ python fizzbuzz 3   
+$ python src 3   
 Fizz
 
-$ python 1 2 3 5 15
+$ python src 1 2 3 5 15
 1
 2
 Fizz
 Buzz
 FizzBuzz
-
 ```
 
 The unit tests for ``fizz_buzz``can be run on the command line interface:
