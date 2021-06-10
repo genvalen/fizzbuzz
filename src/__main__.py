@@ -5,13 +5,11 @@ import sys
 from fizzbuzzer.fizzbuzz import fizz_buzz
 
 args = sys.argv[1:]
-args = map(int, args)
+# for arg in args:
+#     print(type(arg), arg)
 
-# print output of each argument on a new line
-output = ""
-for arg in args:
-    output += '{}\n'.format(
-        fizz_buzz(arg)
-    )
-
-print(output)
+if args:
+    for arg in args:
+        print(fizz_buzz(arg))
+else:
+    print('Whoops! You forgot to pass in a number (or two) to convert with FizzBuzzer')
