@@ -31,7 +31,7 @@ Buzz
 FizzBuzz
 ```
 
-The unit tests for ``fizz_buzz``can be run on the command line interface:
+The unit tests for ``fizz_buzz`` can be run on the command line interface:
 
 ```
 $ python -m unittest
