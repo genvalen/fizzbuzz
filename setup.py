@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 
 setup(name='fizzbuzzer',
-      version='0.0.2',
+      version='0.0.3',
       author='Genvalen',
       author_email='',
       description='Return the output of an integer, x, according to the rules of FizzBuzz on your command line.',
