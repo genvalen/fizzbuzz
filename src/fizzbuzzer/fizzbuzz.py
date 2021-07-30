@@ -1,6 +1,4 @@
-from typing import List, Any
-
-import doctest
+from typing import Any
     
 def is_divisible_by_3(x: int) -> bool:
     '''Determine if x is divisible by 3'''
@@ -34,10 +32,10 @@ def fizz_buzz(x: str) -> Any:
         ...
     TypeError: True is not an integer.
 
-    # >>> fizz_buzz(3.1415926)
-    # Traceback (most recent call last):
-    #     ...
-    # TypeError: 3.1415926 is not an integer.  
+    >>> fizz_buzz(3.1415926)
+    Traceback (most recent call last):
+        ...
+    TypeError: 3.1415926 is not an integer.  
     '''
     # If x is a decimal string, convert to int type
     if isinstance(x, str) and x.isdecimal():
@@ -65,4 +63,5 @@ def fizz_buzz(x: str) -> Any:
 
 
 if __name__ == '__main__':
+    import doctest
     doctest.testmod()
