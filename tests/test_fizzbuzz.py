@@ -102,7 +102,7 @@ class FizzBuzzTest(unittest.TestCase):
 
     def test_that_passing_fraction_as_argument_raises_error(self):
         with self.assertRaises(TypeError):
-            fizz_buzz('2/3')
+            fizz_buzz(2/3)
 
     def test_that_passing_a_float_as_argument_raises_error(self):
         with self.assertRaises(TypeError):
