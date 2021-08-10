@@ -23,7 +23,7 @@ To begin using, clone the repository, open in the command line interface, and ty
 $ fizzbuzzer 3   
 Fizz
 
-$ fizzbuzzer src 1 2 3 5 15
+$ fizzbuzzer 1 2 3 5 15
 1
 2
 Fizz
