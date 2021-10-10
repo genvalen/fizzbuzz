@@ -17,10 +17,10 @@ If x doesn't satisfy any of the above conditions, simply return x.
 * Python 3.7.4+
 
 ## How to Use
-To begin using, clone the repository, open in the command line interface, and type `$ fizzbuzzer` followed by the integer(s) you want to convert. If you pass in more than one integer, each result is returned on a new line. Here are a few input examples:
+To begin using, type `fizzbuzzer` followed by the integer(s) you want to convert. If you pass in more than one integer, each result is returned on a new line. Here are a few input examples:
 
 ```
-$ fizzbuzzer 3   
+$ fizzbuzzer 3
 Fizz
 
 $ fizzbuzzer 1 2 3 5 15
@@ -41,6 +41,6 @@ $ python -m unittest -v
 As well as the doctests:
 
 ```
-$ python -m doctest fizzbuzz.py 
+$ python -m doctest fizzbuzz.py
 $ python -m doctest fizzbuzz.py -v
 ```
