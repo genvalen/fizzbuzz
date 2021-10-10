@@ -5,7 +5,8 @@ from src.fizzbuzzer.fizzbuzz import fizz_buzz
 class FizzBuzzTest(unittest.TestCase):
 
 # The following parameterized tests examine the output when x is 1 - 15.
-# Testing numbers 1 - 15 is enough to ENSURE COVERAGE of all multiples of 3, 5, or both 3 AND 5.
+# Testing numbers 1 - 15 is enough to ENSURE COVERAGE of
+# all multiples of 3, 5, or both 3 AND 5.
     def test_that_an_input_x_divisble_by_neither_3_or_5_returns_x(self):
         test_cases = [
             (1, 1),
@@ -47,11 +48,11 @@ class FizzBuzzTest(unittest.TestCase):
 # Testing numbers beyond 15
 #####################################
 
-# Test when x is a multiple of 3 in the range of 3 through 100 
+# Test when x is a multiple of 3 in the range of 3 through 100
     def test_multiples_of_3_in_range_3_to_100(self):
         test_cases = [
             (num, 'Fizz') 
-            for num in range(3, 101, 3) 
+            for num in range(3, 101, 3)
             if num % 5 != 0 # ignore multiples of 5
         ]
         for number, expected_output in test_cases:
@@ -72,8 +73,8 @@ class FizzBuzzTest(unittest.TestCase):
 # Test multiples of 5 that are also multiples of 3 in the range of 5 through 100
     def test_multiples_of_5_that_are_also_multiples_of_3_in_range_5_to_100(self):
         test_cases = [
-            (num, 'FizzBuzz') 
-            for num in range(5, 101, 5) 
+            (num, 'FizzBuzz')
+            for num in range(5, 101, 5)
             if num % 3 == 0 
         ]
         for number, expected_output in test_cases:
@@ -89,7 +90,7 @@ class FizzBuzzTest(unittest.TestCase):
     def test_outputs_when_x_is_in_the_range_of_16_through_30(self):
         self.assertListEqual(
             [fizz_buzz(x) for x in range(16, 31)],
-            [16, 17, 'Fizz', 19, 'Buzz', 'Fizz', 22, 23, 'Fizz', 'Buzz', 26, 'Fizz', 28, 29, 'FizzBuzz'] 
+            [16, 17, 'Fizz', 19, 'Buzz', 'Fizz', 22, 23, 'Fizz', 'Buzz', 26, 'Fizz', 28, 29, 'FizzBuzz']
         )
 
 # Testing Errors

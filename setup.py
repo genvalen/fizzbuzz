@@ -9,11 +9,11 @@ setup(name='fizzbuzzer',
       author='Genvalen',
       author_email='',
       description='Return the output of an integer, x, according to the rules of FizzBuzz on your command line.',
-      long_description=long_description, 
+      long_description=long_description,
       long_description_content_type='text/markdown',
       url='https://github.com/genvalen/fizzbuzz',
       project_url= {
-            'Bug Tracker' : 'https://github.com/genvalen/fizzbuzz/issues' 
+            'Bug Tracker' : 'https://github.com/genvalen/fizzbuzz/issues'
       },
       license='MIT',
       packages=['fizzbuzzer'],
@@ -27,4 +27,3 @@ setup(name='fizzbuzzer',
       ],
       python_requires=">=3.7"
 )
-      
